@@ -17,10 +17,13 @@ body {
     background-color: #0D262D;
     color: #fff;
 
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100%;
 }
 
 [wm-Knucles] {
@@ -28,9 +31,8 @@ body {
     background-image: url(../img/EmeraldIsland.png);
     background-size: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position:relative;
+    
 
     border: 5px solid darkblue;
     height: 700px;
@@ -51,8 +53,8 @@ body {
 
 .par {
     position: absolute;
-    top: 10%;
-    height: 69.65%;
+    top: 0%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -65,7 +67,7 @@ body {
 }
 
 .twin .borda  {
-    height: 30px;
+    height: 60px;
     width: 130px;
     background: linear-gradient(90deg, #639301, #A5E82E);
     border: 2px solid #000;
