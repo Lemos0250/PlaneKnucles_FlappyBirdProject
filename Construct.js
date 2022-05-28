@@ -75,8 +75,43 @@ function Barreiras(altura , largura, abertura, espaco, notificarPonto) {
     }
 }
 
+function Knucles(alturaJogo) {
+    let voando = false
+
+    this.elemento = novoElemento('img', 'knucles')
+    this.elemento.src = 'img/PlaneKnucles-removebg-preview.png'
+
+    this.getY = () => parseInt(this.elemento.style.bottom.split('px')[0])
+    this.setY = y => this.elemento.style.bottom = `${y}px`
+
+    window.onkeydown = e => voando = true
+    window.onkeyup = e => voando = false
+
+    this.animar = () => {
+        const novoY = this.getY() + (voando ? 8 : -5)
+        const alturaMaxima = alturaJogo - this.elemento.clientHeight
+
+        if (novoY <= 0) {
+            this.setY(0)
+        } else if ( novoY >= alturaMaxima) {
+            this.setY(alturaMaxima)
+        } else {
+            this.setY(novoY)
+        }
+    }
+
+    this.setY(alturaJogo / 2)
+}
+
 
 const barreiras = new Barreiras(800, 1100, 500, 400)
+const knucles = new Knucles(700)
 const areaDoJogo = document.querySelector('[wm-Knucles]')
+
+areaDoJogo.appendChild(knucles.elemento)
 barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
+setInterval(() => {
+    barreiras.animar()
+    knucles.animar()
+}, 20)
 
