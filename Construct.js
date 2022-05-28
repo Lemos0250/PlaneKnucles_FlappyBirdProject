@@ -38,7 +38,7 @@ function ParDeBarreiras(altura, abertura, x) {
 
     this.getX = () => parseInt(this.elemento.style.left.split('px')[0])
     this.setX = x => this.elemento.style.left = `${x}px`
-    this.getLargura = () => this.elemento.clientWidith
+    this.getLargura = () => this.elemento.clientWidth
 
     this.sortearAbertura()
     this.setX(x)
@@ -103,7 +103,15 @@ function Knucles(alturaJogo) {
     this.setY(alturaJogo / 2)
 }
 
+function Progresso() {
+    this.elemento = novoElemento('span' ,'progress')
+    this.atualizarPontos = pontos => {
+        this.elemento.innerHTML = pontos
+    }
+    this.atualizarPontos(0)
+}
 
+/*
 const barreiras = new Barreiras(800, 1100, 500, 400)
 const knucles = new Knucles(700)
 const areaDoJogo = document.querySelector('[wm-Knucles]')
@@ -114,4 +122,44 @@ setInterval(() => {
     barreiras.animar()
     knucles.animar()
 }, 20)
+
+
+const barreiras = new Barreiras(800, 1100, 500, 400)
+const knucles = new Knucles(700)
+const areaDoJogo = document.querySelector('[wm-Knucles]')
+areaDoJogo.appendChild(knucles.elemento)
+areaDoJogo.appendChild(new Progresso() .elemento)
+barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
+setInterval (() => {
+    barreiras.animar()
+    knucles.animar()
+}, 20)
+*/
+
+
+function KnuclesPlane() {
+    let pontos = 0
+
+    const areaDoJogo = document.querySelector('[wm-Knucles]')
+    const altura = areaDoJogo.clientHeight
+    const largura = areaDoJogo.clientWidth
+
+    const progresso = new Progresso()
+    const barreiras = new Barreiras(altura, largura, 300, 400, 
+        () => progresso.atualizarPontos(++pontos))
+        const knucles = new Knucles(altura)
+
+        areaDoJogo.appendChild(progresso.elemento)
+        areaDoJogo.appendChild(knucles.elemento)
+        barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
+
+        this.start = () => {
+            const temporizador = setInterval(() => {
+                barreiras.animar()
+                knucles.animar()
+            }, 20)
+        }
+}
+
+new KnuclesPlane().start()
 

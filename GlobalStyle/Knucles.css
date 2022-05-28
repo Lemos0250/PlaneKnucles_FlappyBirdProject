@@ -89,4 +89,5 @@ body {
     position: absolute;
     top:10px;
     left: 550px;
+    z-index: 100;
 }
