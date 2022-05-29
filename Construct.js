@@ -136,6 +136,31 @@ setInterval (() => {
 }, 20)
 */
 
+function estaoSobrepostos(elementoA, elementoB) {
+    const a = elementoA.getBoundingClientRect()
+    const b = elementoB.getBoundingClientRect()
+
+    const horizontal = a.left + a.width >= b.left
+        && b.left + b.width >= a.left
+    const vertical = a.top + a.height >= b.top
+        && b.top + b.height >= a.top 
+    return horizontal && vertical
+
+}
+
+function colidiu(knucles, barreiras) {
+    let colidiu = false
+    barreiras.pares.forEach(ParDeBarreiras => {
+        if (!colidiu) {
+            const superior = ParDeBarreiras.superior.elemento
+            const inferior = ParDeBarreiras.inferior.elemento
+            colidiu = estaoSobrepostos(knucles.elemento, superior)
+                || estaoSobrepostos(knucles.elemento, inferior)
+        }
+    })
+    return colidiu
+
+}
 
 function KnuclesPlane() {
     let pontos = 0
@@ -157,6 +182,10 @@ function KnuclesPlane() {
             const temporizador = setInterval(() => {
                 barreiras.animar()
                 knucles.animar()
+
+                if(colidiu(knucles, barreiras)) {
+                    clearInterval(temporizador)
+                }
             }, 20)
         }
 }

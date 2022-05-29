@@ -58,12 +58,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 .twin {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .twin .borda  {
@@ -71,6 +73,7 @@ body {
     width: 130px;
     background: linear-gradient(90deg, #639301, #A5E82E);
     border: 2px solid #000;
+
 }
 
 .twin .corpo {
@@ -80,6 +83,7 @@ body {
     background: linear-gradient(90deg, #639301, #A5E82E);
     border-left: 2px solid #000;
     border-right: 2px solid #000;
+
 }
 
 .progress {
@@ -88,6 +92,13 @@ body {
 
     position: absolute;
     top:10px;
-    left: 550px;
+    left: 1135px;
     z-index: 100;
+}
+
+.esmeralda {
+    padding-left: 86.5%;
+    padding-top: 20%;
+
+    height: 50%;
 }
