@@ -1,5 +1,6 @@
+<hr/>
+
 # *Plane Knucles - A Flappy Bird Copy*
----
 
 A project that aims to copy the ideas and mechanics of the popular game Flappy Bird, but using the character Knucles and the setting of the Sonic series made in HTML, CSS and JS.
 
