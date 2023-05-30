@@ -1,5 +1,12 @@
-# **Plane Knucles**
-
+# *Plane Knucles - A Flappy Bird Copy*
 ---
-![js](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)![html](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![css](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-## Um projeto que visa copiar as ideias e mecânicas do popular jogo Flappy Bird, mas utilizando-se do personagem Knucles e da ambientação da serie Sonic feito em HTML5, CSS3 e JS.
+## A project that aims to copy the ideas and mechanics of the popular game Flappy Bird, but using the character Knucles and the setting of the Sonic series made in HTML, CSS and JS.
+
+## Techs
+
+The following tools were necessary for the development of this game:
+
+<img align="center" alt="HTML5" height="30" width="30" src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain.svg"> **HTML**: HTML5 is a markup language for the World Wide Web and is a key Internet technology, originally proposed by Opera Software. It is the fifth version of the HTML language.
+<img align="center" alt="CSS3" height="30" width="30" src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain.svg"> **CSS**: CSS3 is the third and newest version of the famous Cascading Style Sheets, by which styles are defined for a web project. With transition effects, image, background/background image and others, you can create unique styles for your web projects by changing various design aspects in the page layout.
+<img align="center" alt="Java Script" height="30" width="30" src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-plain.svg"> **JS**: JavaScript is a structured, high-level scripting, dynamically typed, multiparadigm, interpreted programming language. Along with HTML and CSS, JavaScript is one of the three main technologies on the World Wide Web..
+
