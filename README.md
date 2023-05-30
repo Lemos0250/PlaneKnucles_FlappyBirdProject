@@ -14,3 +14,5 @@ The following tools were necessary for the development of this game:
 
 - <img align="center" alt="Java Script" height="30" width="30" src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-plain.svg"> **JS**: JavaScript is a structured, high-level scripting, dynamically typed, multiparadigm, interpreted programming language. Along with HTML and CSS, JavaScript is one of the three main technologies on the World Wide Web..
 
+<hr/>
+
